@@ -36,7 +36,7 @@ jobs:
       - name: Checkout PACK-personal repo
         uses: actions/checkout@v4
         with:
-          repository: aisystant/PACK-personal
+          repository: MimEcoSys/PACK-personal
           path: PACK-personal
           token: ${{ secrets.PACK_READ_TOKEN || secrets.GITHUB_TOKEN }}
 

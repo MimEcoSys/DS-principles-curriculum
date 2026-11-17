@@ -136,7 +136,7 @@ def get_repo() -> str:
     )
     if result.returncode == 0:
         return result.stdout.strip()
-    return "aisystant/DS-principles-curriculum"
+    return "MimEcoSys/DS-principles-curriculum"
 
 
 def generate_dashboard(results: list[dict], days: int) -> str:

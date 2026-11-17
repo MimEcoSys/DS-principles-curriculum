@@ -77,7 +77,7 @@ sudo systemctl reload caddy
           unzip nomad.zip && sudo mv nomad /usr/local/bin/
 
           # Получить nomad job spec из curriculum repo
-          curl -sL "https://raw.githubusercontent.com/aisystant/DS-principles-curriculum/main/infra/nomad/docs-staging.nomad" -o docs-staging.nomad
+          curl -sL "https://raw.githubusercontent.com/MimEcoSys/DS-principles-curriculum/main/infra/nomad/docs-staging.nomad" -o docs-staging.nomad
 
           # Deploy
           nomad job run -var image_tag=${{ github.sha }} docs-staging.nomad

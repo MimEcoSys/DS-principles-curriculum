@@ -32,8 +32,8 @@
 
 ### Ссылки
 
-- Типовой раздел: https://github.com/aisystant/DS-principles-curriculum/blob/main/specs/v4-reference/01-section-1-draft.md
-- Требования: https://github.com/aisystant/DS-principles-curriculum/blob/main/specs/v4-reference/00-requirements.md
+- Типовой раздел: https://github.com/MimEcoSys/DS-principles-curriculum/blob/main/specs/v4-reference/01-section-1-draft.md
+- Требования: https://github.com/MimEcoSys/DS-principles-curriculum/blob/main/specs/v4-reference/00-requirements.md
 - Структуры: 01-structure-guide-1.md, 02-structure-guide-2.md, 03-structure-guide-3.md, 04-structure-guide-4.md
 
 ### Следующая сессия

@@ -21,8 +21,8 @@
 |--------|-------|---------------|-------|
 | `DOCS_READ_TOKEN` | `aisystant/docs` Contents:R | DS-principles-curriculum | `completeness` step без warning |
 | `DOCS_WRITE_TOKEN` | `aisystant/docs` Contents:W + PR:W | DS-principles-curriculum | `build-skeleton.yml` → PR в docs |
-| `PACK_READ_TOKEN` | `aisystant/PACK-personal` Contents:R | DS-principles-curriculum | Fallback если repo приватный |
-| `CURRICULUM_DISPATCH_TOKEN` | `aisystant/DS-principles-curriculum` Contents:R + Metadata:R + Actions:W | PACK-personal | Cross-repo trigger pack-drift, TTL 90 дней |
+| `PACK_READ_TOKEN` | `MimEcoSys/PACK-personal` Contents:R | DS-principles-curriculum | Fallback если repo приватный |
+| `CURRICULUM_DISPATCH_TOKEN` | `MimEcoSys/DS-principles-curriculum` Contents:R + Metadata:R + Actions:W | PACK-personal | Cross-repo trigger pack-drift, TTL 90 дней |
 | `NOMAD_ADDR` + `NOMAD_TOKEN` | Nomad cluster | aisystant/docs | Deploy staging из CI |
 | `TELEGRAM_BOT_TOKEN` + `TELEGRAM_CHAT_ID` | Telegram bot | DS-principles-curriculum | Release notifications (опционально) |
 
@@ -30,7 +30,7 @@
 
 ### 2. Branch protection rules (GitHub UI)
 
-**Репо:** `aisystant/DS-principles-curriculum`, ветка `main`.
+**Репо:** `MimEcoSys/DS-principles-curriculum`, ветка `main`.
 
 Settings → Branches → Add rule:
 - ✅ **Require a pull request before merging**
@@ -82,7 +82,7 @@ git push origin v0.1.0
 
 1. GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens
 2. Generate new token:
-   - Repository access: `aisystant/DS-principles-curriculum`
+   - Repository access: `MimEcoSys/DS-principles-curriculum`
    - Permissions: Contents (Read), Metadata (Read), Actions (Write)
    - Expiration: 90 дней
 3. Обновить secret `CURRICULUM_DISPATCH_TOKEN` в `PACK-personal`.

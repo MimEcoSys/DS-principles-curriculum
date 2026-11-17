@@ -25,7 +25,7 @@ updated: 2026-05-16
 
 **PACK-rhetoric — источник иллюстраций (WP-340):** Кейсы, аналогии и метафоры — не Pack-понятия, они не входят в `introduces`/`uses`. Но они работают лучше, когда переиспользуются последовательно между руководствами. Когда PACK-rhetoric появится (WP-340 Ф3+), автор обязан проверить там наличие подходящей иллюстрации ДО создания новой ad-hoc. Признак «есть в PACK-rhetoric» ≠ обязательное использование, но «нет в PACK-rhetoric + иллюстрация работает» → занести в WP-340 inbox для добычи.
 
-**Правило:** финальный текст подраздела коммитится в `aisystant/docs/docs/ru/personal-design/`. Черновики, структура и конвейер — в `aisystant/DS-principles-curriculum/specs/v4-reference/`. Не писать финальные тексты в `DS-principles-curriculum/docs/v4/` (это draft, удалён).
+**Правило:** финальный текст подраздела коммитится в `aisystant/docs/docs/ru/personal-design/`. Черновики, структура и конвейер — в `MimEcoSys/DS-principles-curriculum/specs/v4-reference/`. Не писать финальные тексты в `DS-principles-curriculum/docs/v4/` (это draft, удалён).
 
 ---
 
