@@ -2411,10 +2411,13 @@ def cmd_completeness(args: argparse.Namespace) -> int:
 
 # Regex to extract concept names from ontology.md §2 table first column
 ONTOLOGY_TERM_RE = re.compile(r"^\|\s*\*\*([^*|]+)\*\*")
+# A synonym declared in the definition column: "... Синоним: Киберличность. ..."
+ONTOLOGY_SYNONYM_RE = re.compile(r"Синоним:\s*([^.|]+?)\s*(?:[.|]|$)")
 
 
 def load_ontology_concepts(path: Path) -> set[str]:
-    """Извлечь множество имён понятий из ontology.md §2 (первая колонка таблицы)."""
+    """Извлечь имена понятий из ontology.md §2: первая колонка таблицы
+    и синонимы, объявленные в определении («Синоним: X»)."""
     concepts: set[str] = set()
     try:
         text = path.read_text(encoding="utf-8")
@@ -2431,8 +2434,8 @@ def load_ontology_concepts(path: Path) -> set[str]:
             continue
         m = ONTOLOGY_TERM_RE.match(line)
         if m:
-            name = m.group(1).strip()
-            concepts.add(name)
+            concepts.add(m.group(1).strip())
+            concepts.update(s.strip() for s in ONTOLOGY_SYNONYM_RE.findall(line))
     return concepts
 
 
